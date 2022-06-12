@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>月色真美,风也温柔</title>
-    <meta name="description" content="这里是KZHomePage，一款二次元卡片式个人主页，目前站长仍在学习中，每天抽出时间来看书学习，励志成为一个技术很牛的程序员。">
+    <meta name="description" content="KZHomePage是一款二次元卡片式个人网站主页模板">
     <meta name="keywords" content="风也温柔,个人主页,程序员">
     <link rel="icon" type="image/ico" href="//sdn.geekzu.org/avatar/4cc893d113dd74ceca73f9863f2c5446/">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="./static/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+    <link rel="stylesheet" href="./static/style.css?v=1.1">
+    <link rel="stylesheet" href="./static/APlayer-1.10.1/dist/APlayer.min.css">
+    <style>
+        body{
+            /*背景图片URL 可使用随机图片API */
+            background-image: url("https://bu.dusays.com/2022/06/04/629b0a2a89425.png"); 
+        }
+        .photo-bg {
+            /* 卡片左侧图片 */
+            background-image: url("https://bu.dusays.com/2022/06/04/629b0a2750921.jpg");
+        }
+    </style>
     <script>
         // 音乐设置
         let meting_music_api = "https://api.mizore.cn/meting/api.php";// meting api
-        let music_server = "netease"; // 音乐服务：网易云 netease
+        let music_server = "netease"; // 音乐服务：网易云 netease 参见 meting api支持的服务
         let music_type = "playlist"; // 歌曲类型：歌单playlist 单首歌曲 song  专辑 album
         let music_id = "20173709"; // 歌单ID或歌曲ID或者专辑ID 20173709 29732992
         let music_order = "random"; // 音频循环顺序, 顺序播放： 'list', 随机播放：'random'
         let music_mini = false; // mini模式 吸底模式开启后此选项实效 true / false
         let music_fixed = false; // 吸底模式
         let music_volume = 0.7; // 默认音量
-        let music_autoplay = true; // 自动播放
-        let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none'
+        let music_autoplay = false; // 自动播放
+        let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none' ，分别为全部循环，单曲循环，不循环
         // 一言设置
 
     
@@ -35,37 +44,37 @@
         <div class="row my-card justify-content-center">
             <div class="col-lg-4 photo-bg"></div>
             <div class="col-lg-8 card">
-                <h1>Hi，这里是KZHomePage！</h1>
+                <h1>KZHomePage</h1>
                 <p>很荣幸您能访问我的网站！ 目前我仍在学习中，每天抽出时间来看书学习，励志成为一个技术很牛的程序员。
                 </p>
-                <p id="hitokoto_text">:D 获取中...</p>
+                <p id="hitokoto_text">:D 一言获取中...</p>
                 <div class="container-fluid">
                     <div class="row">
                         <button id="kaygb-blog" class="btn btn-primary col-lg-4">BLOG</button>
-                        <a href="//eas1.cn" id="kaygb-blog-a" target="_blank" class="btn btn-primary col-lg-4">BLOG</a>
+                        <a href="//www.kezez.com" id="kaygb-blog-a" target="_blank" class="btn btn-primary col-lg-4">BLOG</a>
                         <a href="https://github.com/kaygb/KZHomePage" target="_blank" class="btn btn-secondary col-lg-4">GitHub</a>
-                        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=i@eas1.cn" target="_blank" id="kaygb-mail-a" class="btn btn-success col-lg-4">Send a Mail</a>
+                        <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=hi@kezez.com" target="_blank" id="kaygb-mail-a" class="btn btn-success col-lg-4">Send a Mail</a>
                         <button id="kaygb-mail" class="btn btn-success col-lg-4">Send a Mail</button>
                     </div>
                 </div>
                 <!-- <audio muted></audio> -->
                 <div id="aplayer-inner" class="aplayer"></div>
 
-                <h4 class="mt-4">or, keep your eyes on</h4>
+                <!-- <h4 class="mt-4">or, keep your eyes on</h4> -->
                 <ul class="social mt-1">
                     <li><a href="https://weibo.com/u/5223004318"><i class="fab fa-weibo " aria-hidden="true"></i></a></li>
                     <li><a href="https://github.com/kaygb"><i class="fab fa-github" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fab fa-zhihu" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.zhihu.com/people/kaygb/"><i class="fab fa-zhihu" aria-hidden="true"></i></a></li>
                 </ul>
                 
                 <!-- <div id="aplayer" class="aplayer" data-order="random" data-id="20173709" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-volume="0.8"></div> -->
                 <footer>
-                    <p>Copyright 2018 - Now <a href="https://www.170601.xyz/" target="_blank">kaygb</a> <a href="http://beian.miit.gov.cn/" target="_blank">豫ICP备00000000号-1</a>
+                    <p>Copyright 2018 - Now <a href="https://www.170601.xyz/" target="_blank">七六零一</a> <a href="http://beian.miit.gov.cn/" target="_blank">豫ICP备00000000号-1</a>
                         <br>Mod by
                         <a href="https://github.com/kaygb" target="_blank" rel="">kaygb</a>
-                        <a href="https://console.upyun.com/register/?invite=r1FdZxBoH" target="_blank" rel="nofollow"><img src="https://i.loli.net/2020/09/14/YbXKvLAJhlWN1Ox.png" style="width:50px;"></a>
+                        <a href="https://console.upyun.com/register/?invite=r1FdZxBoH" target="_blank" rel="nofollow"><img src="https://bu.dusays.com/2021/12/15/9991d2344d2ca.png" style="width:50px;"></a>
 
                     </p>
                     </p>
@@ -79,14 +88,14 @@
     <!-- aplayer -->
     <div id="aplayer-fixed"  class="aplayer"></div>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <script src="./static/APlayer-1.10.1/dist/APlayer.min.js"></script>
+    <script src="./static/Meting.min.js"></script>
     <!-- end_aplayer -->
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script defer src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/kaygb/kaygb@master/layer/layer.js"></script>
+    <script src="./static/layer-v3.5.1/layer/layer.js"></script>
     <!-- <script src="./static/main.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/kaygb/KZHomePage@main/static/main.js"></script>
+    <script src="./static/main.js"></script>
     <script>
         //弹出一个页面层
         $('#kaygb-blog').on('click', function() {
@@ -97,7 +106,7 @@
                 shade: false,
                 maxmin: true, //开启最大化最小化按钮
                 area: ['80%', '100%'],
-                content: '//eas1.cn/'
+                content: '//www.kezez.com/'
             });
         });
         $('#kaygb-mail').on('click', function() {
@@ -108,7 +117,7 @@
                 shade: false,
                 maxmin: true, //开启最大化最小化按钮
                 area: ['80%', '100%'],
-                content: '//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=javacc@email.cn'
+                content: '//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=hi@kezez.com'
             });
         });
     </script>
