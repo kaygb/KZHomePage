@@ -1,4 +1,17 @@
 var windowWidth = $(window).width();
+layer.config({
+  extend: 'kzhomepage/style.css', //加载您的扩展样式
+  skin: 'layer-ext-kzhomepage'
+});
+// layer.open({
+//   type: 2,
+//   title: 'Blog',
+//   shadeClose: true,
+//   anim:5,
+//   closeBtn: 2,
+//   area: ['80%', '90%'],
+//   content: '//www.kezez.com/'
+// });
 console.log(
     "\n" +
       " %c KZHomePage by kaygb " +
