@@ -1,6 +1,8 @@
 # KZHomePage
  二次元卡片个人网站主页
 
+详细内容请查看：https://blog.170601.xyz/archives/25.html 
+
 QQ交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-tso4BmPVXPSgqNjPhRCIg4GYZ8Llu_e&jump_from=webapi"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="云端客栈" title="云端客栈">962303102</a>
 
 ## 使用方式
