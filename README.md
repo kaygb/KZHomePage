@@ -7,6 +7,7 @@ QQ交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-tso4Bm
 
 ## 使用方式
 
+### 音乐配置
 使用前请填写head内的相关配置信息
 
 ```javascript
@@ -22,6 +23,24 @@ QQ交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-tso4Bm
     let music_autoplay = true; // 自动播放
     let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none'
 ```
+
+### 按钮颜色
+
+> 按钮颜色使用bootstraap4的颜色格式，只需要修改按钮对应的class类即可改变按钮颜色
+> https://v4.bootcss.com/docs/components/buttons/
+
+
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+![image.png](https://s2.loli.net/2022/06/25/J7LnAZ9ScpwzH6X.png)
 
 ## 依赖项目
 
