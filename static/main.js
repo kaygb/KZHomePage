@@ -1,26 +1,51 @@
 var windowWidth = $(window).width();
 layer.config({
-  extend: 'kzhomepage/style.css', //加载您的扩展样式
+  extend: 'kzhomepage/style.css', //加载扩展样式
   skin: 'layer-ext-kzhomepage'
 });
-// layer.open({
-//   type: 2,
-//   title: 'Blog',
-//   shadeClose: true,
-//   anim:5,
-//   closeBtn: 2,
-//   area: ['80%', '90%'],
-//   content: '//www.kezez.com/'
-// });
+
+// Nav buttons
+$('.kz-nav-btn').on('click', function() {
+  let btn = $(this);
+  let type = btn.data('window') // pop current newtab
+  let content = btn.data('href')
+  switch (type) {
+    case 'pop':
+      let title = btn.data('title')
+      let shadeClose = btn.data('shade') === 'true' ? false : true
+      let anim = btn.data('anim') ? btn.data('anim')*1 : 4
+      let area_w = btn.data('area-w') ? btn.data('area-w') : '80%'
+      let area_h = btn.data('area-h') ? btn.data('area-h') : '90%'
+      layer.open({
+          type: 2,
+          title: title,
+          shadeClose: shadeClose,
+          anim:anim,
+          closeBtn: 2,
+          isOutAnim: false,
+          area: [area_w, area_h],
+          content: content
+      });
+      break;
+    case 'current':
+      window.location = content
+      break;
+    case 'newtab':
+      window.open('_blank').location = content
+      break;
+  }
+});
+
 console.log(
     "\n" +
-      " %c KZHomePage by kaygb " +
+      " %c KZHomePage v1.2.0 by kaygb " +
       " %c https://blog.170601.xyz/archives/25.html " +
       "\n" +
       "\n",
     "color: #fff; background: #fd79a8; padding:5px 0;",
     "background: #FFF; padding:5px 0;"
-  );  
+  );
+// 兼容旧版
 if(meting_music_api===""){
     meting_api = "https://api.mizore.cn/meting/api.php";
 }
@@ -37,7 +62,6 @@ $.ajax({
   },
   dataType: "json",
   success: function (audio) {
-
     const ap = new APlayer({
         container: music_fixed === false ? document.getElementById('aplayer-inner') : document.getElementById('aplayer-fixed') ,
         audio: audio,
@@ -53,9 +77,6 @@ $.ajax({
 
         
     });
-    // if(music_autoplay){
-    //     ap.play();
-    // }
   },
 });
 
