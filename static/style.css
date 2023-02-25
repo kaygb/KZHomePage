@@ -1,4 +1,4 @@
-body {
+html, body {
     font-size: 18px;
     color: #6c767d;
     background-color: #ebf1f5;
@@ -6,8 +6,7 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    min-height: 800px;
+    height: 100%;
 }
 
 
