@@ -22,17 +22,22 @@
     <style>
         body {
             /*背景图片URL 可使用随机图片API */
-            background-image: url("https://bu.dusays.com/2022/06/04/629b0a2a89425.png");
+            background-image: url("./static/images/bg.jpeg");
         }
 
         .photo-bg {
             /* 卡片左侧图片 */
-            background-image: url("https://bu.dusays.com/2022/06/04/629b0a2750921.jpg");
+            background-image: url("./static/images/fbg.jpg");
+        }
+
+        .kz-video {
+            /* 背景视频，none: 不显示 unset 显示 */
+            display: none; 
         }
     </style>
     <script>
         // 音乐设置
-        let meting_music_api = "https://meting.170601.xyz";// meting api
+        let meting_music_api = "https://www.kezez.com/api/meting-api/";// meting api
         let music_server = "netease"; // 音乐服务：网易云 netease 参见 meting api支持的服务
         let music_type = "playlist"; // 歌曲类型：歌单playlist 单首歌曲 song  专辑 album
         let music_id = "8362718673"; // 歌单ID或歌曲ID或者专辑ID 20173709 29732992
@@ -42,7 +47,9 @@
         let music_volume = 0.7; // 默认音量
         let music_autoplay = false; // 自动播放
         let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none' ，分别为全部循环，单曲循环，不循环
-        // TODO 一言设置
+
+        // 一言设置
+        let hitokoto_api = "https://v1.hitokoto.cn"; // 一言API
     </script>
     <!-- end 自定义设置 -->
 </head>
@@ -96,8 +103,11 @@
                 <footer>
                     <p>Copyright 2018 - Now <a href="https://www.170601.xyz/" target="_blank">七六零一</a>
                         <a href="http://beian.miit.gov.cn/" target="_blank">豫ICP备00000000号-1</a>
-                        <br>Mod by
+                        <br>
+                        <a href="https://github.com/kaygb/KZHomePage" target="_blank" rel="">KZHomePage</a>
+                        Mod by
                         <a href="https://github.com/kaygb" target="_blank" rel="">kaygb</a>
+                        <br>
                         <a href="https://console.upyun.com/register/?invite=r1FdZxBoH" target="_blank"
                             rel="nofollow"><img src="https://bu.dusays.com/2021/12/15/9991d2344d2ca.png"
                                 style="width:50px;"></a>
